@@ -10,8 +10,8 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Pestilence")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Pestilence")>
+<Assembly: AssemblyCompany("black death inc.")>
+<Assembly: AssemblyProduct("Pestilence CollabVM Bot")>
 <Assembly: AssemblyCopyright("Copyright © black death 2020")>
 <Assembly: AssemblyTrademark("")>
 
