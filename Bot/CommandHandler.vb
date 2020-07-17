@@ -37,4 +37,10 @@
     Sub AddCmd(cmd As ICommand)
         Commands(cmd.Name) = cmd
     End Sub
+
+    Sub AddCmds(ByVal ParamArray cmds As ICommand())
+        For Each cmd As ICommand In cmds
+            AddCmd(cmd)
+        Next
+    End Sub
 End Class

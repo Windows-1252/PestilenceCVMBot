@@ -11,6 +11,8 @@
 
         AddHandler Guac.OnOpen, AddressOf OnGuacOpen
         AddHandler Guac.OnMessage, AddressOf OnGuacMessage
+
+        CmdHandler.AddCmds(New MessageCmd, New StartCmd)
     End Sub
 
     Sub Start()
