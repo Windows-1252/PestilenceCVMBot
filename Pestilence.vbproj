@@ -83,7 +83,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CvmBot.vb" />
+    <Compile Include="Bot\CommandHandler.vb" />
+    <Compile Include="Commands\MessageCmd.vb" />
+    <Compile Include="Commands\StartCmd.vb" />
+    <Compile Include="Bot\CvmBot.vb" />
+    <Compile Include="Bot\ICommand.vb" />
     <Compile Include="KernelUtils.vb" />
     <Compile Include="MainModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,7 +105,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Guacamole.vb" />
+    <Compile Include="Bot\Guacamole.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -128,5 +132,6 @@
   <ItemGroup>
     <None Include="Resources\elError.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
