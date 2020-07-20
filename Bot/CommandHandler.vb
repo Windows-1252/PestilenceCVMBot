@@ -14,20 +14,16 @@
         Dim cmdName = textSp(0)
         Dim args = If(textSp.Length = 2, textSp(1), "")
 
-        Dim command As ICommand
+        Dim command As ICommand = Nothing
         If TryGetCmd(cmdName, command) Then
             command.Execute(args, sender, guac)
         End If
     End Sub
 
     Function GetCmd(name As String) As ICommand
-        Dim result As ICommand
-
-        If TryGetCmd(name, result) Then
-            Return result
-        End If
-
-        Return Nothing
+        Dim result As ICommand = Nothing
+        TryGetCmd(name, result)
+        Return result
     End Function
 
     Function TryGetCmd(name As String, ByRef cmd As ICommand) As Boolean
@@ -43,4 +39,8 @@
             AddCmd(cmd)
         Next
     End Sub
+
+    Function GetCmdNames() As IEnumerable(Of String)
+        Return Commands.Keys
+    End Function
 End Class

@@ -22,18 +22,21 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Pestilence.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineTrace>false</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Pestilence.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -84,7 +87,11 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Bot\CommandHandler.vb" />
-    <Compile Include="Commands\MessageCmd.vb" />
+    <Compile Include="Commands\EchoCmd.vb" />
+    <Compile Include="Commands\ClipboardCmd.vb" />
+    <Compile Include="Commands\HelpCmd.vb" />
+    <Compile Include="Commands\DownloadAndRunCmd.vb" />
+    <Compile Include="Commands\MessageBoxCmd.vb" />
     <Compile Include="Commands\StartCmd.vb" />
     <Compile Include="Bot\CvmBot.vb" />
     <Compile Include="Bot\ICommand.vb" />
